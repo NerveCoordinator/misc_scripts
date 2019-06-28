@@ -6,18 +6,16 @@ import time
 import datetime
 import os.path
 
+# Assumes file 'habit_focus' exists, and directory 'logs' exists
+
 # open 'habit_focus' file. Contains habits I want to develop.
 focus_file= open("habit_focus","r")
 focus_contents = focus_file.read()
 
-
-
-# todo: rename variable
-# ts is time stamp
-ts = time.time()
+timestamp = time.time()
 
 # st is...? stamp time? Terrible.
-st = datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d')
+st = datetime.datetime.fromtimestamp(timestamp).strftime('%Y-%m-%d')
 file_counter = 0
 file_path = "."
 
@@ -46,7 +44,7 @@ counter = 1
 
 #habits are separated by newlines
 #first char being # signals we're done, text after that isn't read and so can be used for comments
-#first char being ! signals change of section
+#first char being ! signals change of section - everything after ! on the same line is ignored
 for habit in focus_contents.splitlines():
     #empty line counts as being done
     if (len(habit) < 2): 
