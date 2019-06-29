@@ -1,4 +1,4 @@
-get amdgpu & vulkan working first
+get amdgpu, vulkan, and steamVR working first
 
 git clone --recursive https://github.com/SimulaVR/Simula Simula
 cd Simula
