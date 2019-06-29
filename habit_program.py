@@ -63,7 +63,7 @@ counter = 1
 #first char being ! signals change of section - everything after ! on the same line is ignored
 
 for habit in focus_contents.splitlines():
-    #empty line counts as being done
+    #empty line is ignored
     if (len(habit) < 1): 
         continue
     # signals we've hit comments, so we're done
