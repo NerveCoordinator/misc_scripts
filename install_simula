@@ -10,3 +10,4 @@ sudo apt-get install haskell-stack --reinstall
 stack --version
 
 make all
+make steam-run
