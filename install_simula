@@ -1,0 +1,12 @@
+get amdgpu & vulkan working first
+
+git clone --recursive https://github.com/SimulaVR/Simula Simula
+cd Simula
+make ubuntu
+sudo apt-get remove haskell-stack
+rm ~/.local/bin/stack
+rm -r ~/.stack-work
+sudo apt-get install haskell-stack --reinstall
+stack --version
+
+make all
