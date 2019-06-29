@@ -46,7 +46,7 @@ log_file= open(file_path,"w+")
 print("\n"*50)
 
 # this instruction works well, and eventually makes habits work even when they're really tricky.
-#print("The goal is to move all habits into 'integrated' and problems into 'in progress'. 2-3 ideas I can try to make that happen faster.")
+# print("The goal is to move all habits into 'integrated' and problems into 'in progress'. 2-3 ideas I can try to make that happen faster.")
 
 # more recent experimentation, trying to work on root cause analysis and reflection
 # in particular, reflecting often puts me into flow
@@ -59,11 +59,11 @@ section = "none"
 # resets when we enter our problems section
 counter = 1 
 
-#first char being # signals we're done, text after that isn't read and so can be used for comments
-#first char being ! signals change of section - everything after ! on the same line is ignored
+# first char being # signals we're done, text after that isn't read and so can be used for comments
+# first char being ! signals change of section - everything after ! on the same line is ignored
 
 for habit in focus_contents.splitlines():
-    #empty line is ignored
+    # empty line is ignored
     if (len(habit) < 1): 
         continue
     # signals we've hit comments, so we're done
@@ -91,5 +91,6 @@ for habit in focus_contents.splitlines():
     counter += 1
 
 log_file.close()
-    
+
+# so that I remember to actually do the habits, or at least notice when I fail to do them. This helps identify why.
 print("\nWrite these down, repeatedly check throughout the day.\n")
