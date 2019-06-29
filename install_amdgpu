@@ -8,3 +8,5 @@ use this line:
 GRUB_CMDLINE_LINUX_DEFAULT="radeon.si_support=0 radeon.cik_support=0 amdgpu.si_support=1 amdgpu.cik_support=1 amdgpu.dc=1 amdgpu.modeset=1" note: this instructions include "amdgpu.dpm=1", but I am unsure if it was removing this, or not downloading the drivers that finally worked
 you don't even need to blacklist radeon.
 
+sudo apt install vulkan-tools
+vkcube
