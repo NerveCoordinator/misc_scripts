@@ -1,0 +1,10 @@
+for ubuntu 19.04
+
+using this guide https://askubuntu.com/questions/1094443/ubuntu-18-04-1-lts-r9-390x-amdgpu-guide-testing-summary 
+do NOT download the driver. Instead, install proprietary drivers on install (this gives you amdgpu)
+
+in /etc/default/grub
+use this line:
+GRUB_CMDLINE_LINUX_DEFAULT="radeon.si_support=0 radeon.cik_support=0 amdgpu.si_support=1 amdgpu.cik_support=1 amdgpu.dc=1 amdgpu.modeset=1" note: this instructions include "amdgpu.dpm=1", but I am unsure if it was removing this, or not downloading the drivers that finally worked
+you don't even need to blacklist radeon.
+
